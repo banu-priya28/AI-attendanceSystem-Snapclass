@@ -14,3 +14,6 @@ segno #qr image generation
 pillow #image preprocessing 
 
 streamlit # front end ge help aguthe
+
+librosa #edit the voice note
+resemblyzer

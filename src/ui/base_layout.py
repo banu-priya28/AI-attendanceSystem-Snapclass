@@ -3,27 +3,27 @@ import streamlit as st
 def style_base_layout():
     st.markdown("""
         <style>
-            @import url('https://fonts.googleapis.com/css2?family=Grechen+Fuemen&display=swap');
+            @import url('https://fonts.googleapis.com/css2?family=Grechen+Fuemen&family=Isometra&family=Outfit:wght@100..900&display=swap');
             @import url('https://fonts.googleapis.com/css2?family=Grechen+Fuemen&family=Outfit:wght@100..900&display=swap');
             
            /* hide top bar*/ 
-                       #MainMenu,footer,header{
-                           visibility:hidden;
-                       }
+            #            #MainMenu,footer,header{
+            #                visibility:hidden;
+            #            }
             .block-container{
-                padding-top:1.5rem !important;
-            }
+                 padding-top:1.5rem !important;
+             }
             h2{
-            font-family:'Grechen Fuemen',sans-serif !important;
-            font-size:3.5rem !important;
+            font-family: "Isometra", sans-serif !important;
+            font-size:1.5rem !important;
             line-height:1.1 !important;
             margin-bottom:0rem !important;
             color:#E0E3FF;
             }
 
             h1{
-            font-family:'Grechen Fuemen',sans-serif !important;
-            font-size:2rem !important;
+            font-family: "Isometra", sans-serif !important;
+            font-size:1rem !important;
             line-height:0.9 !important;
             margin-bottom:0rem !important;
             color:#E0E3FF !important;          
@@ -33,7 +33,7 @@ def style_base_layout():
                 font-family:'Outfit',sans-serif;
             }
             button[kind="secondary"]{
-                background:#EB459E !important;
+                background-color:#EB459E !important;
                 color:white !important;
                 border-radius:1.5rem !important;
                 padding:10px 20px !important;
@@ -41,7 +41,7 @@ def style_base_layout():
                 transition:transform 0,25s ease-in-out !important;
             }
             button[kind="tertiary"]{
-                background:black !important;
+                background-color:black !important;
                 color:white !important;
                 border-radius:1.5rem !important;
                 padding:10px 20px !important;
@@ -49,7 +49,7 @@ def style_base_layout():
                 transition:transform 0,25s ease-in-out !important;
                 }
             button{
-               background:#5865F2 !important;
+               background-color:#5865F2 !important;
                border-radius:1.5rem !important;
                 color:white !important;
                 padding:10px 20px !important;
