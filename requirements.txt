@@ -5,9 +5,8 @@ numpy
 pandas #tables (attendance)
 scikit-learn #face recognition
 dlib #face detection after running it checks 
-#dib-bin #os,py -->whl then not avaivable c++ source --> python package using various internal tools, final py package 
 
-dlib-bin #pre complied binary wheels of dlib making it easy to integrate into your python projects without the hastle of buiding from sources
+
 git+https://github.com/ageitgey/face_recognition # face embeddings -- vector points 
 setuptools<70.0.0
 supabase #free space
