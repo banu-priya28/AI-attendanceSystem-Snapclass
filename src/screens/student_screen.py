@@ -48,7 +48,7 @@ def student_dashboard():
 
         stats_map[sid]['total']+=1
 
-        if logs.get('is_present'):
+        if log.get('is_present'):
             stats_map[sid]['attended']+=1
 
     cols=st.columns(2)
@@ -59,11 +59,22 @@ def student_dashboard():
 
         stats=stats_map.get(sid,{"total":0,"attended":0})
 
+        # def unenroll_btn():
+        #     st.button("Unenroll from this course",type='tertiary',width='stretch',icon=':material/delete_forever:')
+        #     unenroll_student_to_subject(student_id,sid)
+        #     st.toast(f"Unenrolled from {sub['name']} sucessfully")
+        #     st.rerun()
         def unenroll_btn():
-            st.button("Unenroll from this course",type='tertiary',width='stretch',icon=':material/delete_forever:')
-            unenroll_student_to_subject(student_id,sid)
-            st.toast(f"Unenrolled from {sub['name']} sucessfully")
-            st.rerun()
+            if st.button(
+                "Unenroll from this course",
+                type='tertiary',
+                width='stretch',
+                icon=':material/delete_forever:',
+                key=f"unenroll_{sid}"
+            ):
+                unenroll_student_to_subject(student_id, sid)
+                st.toast(f"Unenrolled from {sub['name']} successfully")
+                st.rerun()
 
         with cols[i % 2]:
             subject_card(
@@ -119,7 +130,7 @@ def student_screen():
                         st.session_state.is_logged_in=True
                         st.session_state.user_role='student'
                         st.session_state.student_data=student
-                        st.toast(f'Welcome Back {student['sstudent_name']}')
+                        st.toast(f'Welcome Back {student['student_name']}')
                         time.sleep(1)
                         st.rerun
 

@@ -38,7 +38,7 @@ def style_base_layout():
                 border-radius:1.5rem !important;
                 padding:10px 20px !important;
                 border:none !important;
-                transition:transform 0,25s ease-in-out !important;
+                transition:transform 0.25s ease-in-out !important;
             }
             button[kind="tertiary"]{
                 background-color:black !important;
@@ -46,7 +46,7 @@ def style_base_layout():
                 border-radius:1.5rem !important;
                 padding:10px 20px !important;
                 border:none !important;
-                transition:transform 0,25s ease-in-out !important;
+                transition:transform 0.25s ease-in-out !important;
                 }
             button{
                background-color:#5865F2 !important;
@@ -54,11 +54,19 @@ def style_base_layout():
                 color:white !important;
                 padding:10px 20px !important;
                 border:none !important;
-                transition:transform 0,25s ease-in-out !important;
+                transition:transform 0.25s ease-in-out !important;
                 }
+
             button:hover{
                 transform:scale(1.05);
             }
+            # button {
+            #                 border-radius: 1.5rem !important;
+            #                 color: white !important;
+            #                 border: none !important;
+            #                 transition: none !important;
+            #             }
+            
         </style>
 
                 """

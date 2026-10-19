@@ -23,7 +23,8 @@ def voice_attendance_dialog(selected_subject_id):
                     return
                 candidates_dict={
                     s['students']['students_id'] : s['students']['voice_embedding']
-                    for s in enrolled_students if s['students'].get['voice_embedding']
+                    for s in enrolled_students
+                    if s.get('students') and s['students'].get('voice_embedding')
                 }
 
                 if not candidates_dict:

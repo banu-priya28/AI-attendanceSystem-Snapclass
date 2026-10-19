@@ -103,8 +103,8 @@ def teacher_tab_manage_subjects():
     if subjects:
         for sub in subjects:
             stats=[
-                ("👥","Students",sub['total_students']),
-                ("📚","Classes",sub['total_classes']),
+                ("Students",sub['total_students']),
+                ("Classes",sub['total_classes']),
             ]
         def share_btn():
             if st.button(f"Share Code:{sub['name']}",key=f"share_{sub['subject_code']}",icon=":material/share:"):
@@ -173,7 +173,7 @@ def teacher_tab_take_attendance():
                 all_detected_ids={}
 
                 for idx,img in enumerate(st.session_state.attendance_images):
-                    img_np=np.array(img.convert['RGB'])
+                    img_np=np.array(img.convert('RGB'))
                     detected,_,_=predict_attendance(img_np)
 
                     if detected:
@@ -198,7 +198,7 @@ def teacher_tab_take_attendance():
                         is_present=len(sources)>0
 
                         results.append({
-                            "Name":student['name'],
+                            "Name":student['student_name'],
                             "Id":student['student_id'],
                             "Source":",".join(sources) if is_present else "-",
                             "Status":"Present" if is_present else "Absent"
@@ -235,7 +235,7 @@ def teacher_tab_attendance_records():
 
         data.append({
             "ts_group":ts.split(".")[0] if ts else None,
-            "Time":datetime.fromisocalendar(ts).strftime("%Y-%m-%d %I:%M %p") if ts else "N'A",
+            "Time": datetime.fromisoformat(ts).strftime("%Y-%m-%d %I:%M %p") if ts else "N'A",
             "Subject":r['subjects']['name'],
             "Subject Code":r['subjects']['subject_code'],
             "is_present":bool(r.get('is_present',False))
