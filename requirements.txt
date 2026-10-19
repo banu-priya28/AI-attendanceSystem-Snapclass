@@ -1,3 +1,6 @@
+
+
+streamlit # front end ge help aguthe
 numpy
 pandas #tables (attendance)
 scikit-learn #face recognition
@@ -13,7 +16,6 @@ bcrypt #hashing methods --> passwords
 segno #qr image generation
 pillow #image preprocessing 
 
-streamlit # front end ge help aguthe
 
 librosa #edit the voice note
 resemblyzer
