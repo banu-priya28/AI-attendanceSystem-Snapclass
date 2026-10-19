@@ -1,20 +1,24 @@
-
-
-streamlit # front end ge help aguthe
+streamlit
+# Utilitites 
 numpy
-pandas #tables (attendance)
-scikit-learn #face recognition
-dlib #face detection after running it checks 
+pandas
 
-
-git+https://github.com/ageitgey/face_recognition # face embeddings -- vector points 
+# FACE RECOGNITION
+scikit-learn
+dlib-bin
+git+https://github.com/ageitgey/face_recognition_models
 setuptools<70.0.0
-supabase #free space
-bcrypt #hashing methods --> passwords
-
-segno #qr image generation
-pillow #image preprocessing 
 
 
-librosa #edit the voice note
+supabase
+bcrypt
+
+
+
+segno
+pillow
+
+
+
+librosa
 resemblyzer
